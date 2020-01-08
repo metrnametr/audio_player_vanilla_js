@@ -1,0 +1,199 @@
+@import '../styles/variables.scss';
+
+.player-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    padding: 8px;
+    background: rgb(0,136,255);
+    background: linear-gradient(90deg, rgba(0,136,255,0.8379726890756303) 32%, rgba(204,100,183,0.8407738095238095) 87%);
+    border-radius: 2px;
+    -webkit-box-shadow: 2px 7px 3px -5px $mainLight;
+    -moz-box-shadow: 2px 7px 3px -5px $mainLight;
+    box-shadow: 2px 7px 3px -5px $mainLight;
+    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1260px) {
+        width: 80%;
+    }
+
+    .canvas-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        .duration {
+            align-self: flex-start;
+            -webkit-transition-duration: .1ms;
+            -moz-transition-duration: .1ms;
+            -o-transition-duration: .1ms;
+            transition-duration: .1ms;
+        }
+        canvas {
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+
+    .duration {
+        border-radius: 3px;
+        border-radius: 50px;
+        -webkit-transition: width .2s;
+        transition: width .2s;
+    }
+
+    .button-play {
+        width: 5%;
+        cursor: pointer;
+        i {
+            font-size: 24px;
+        }
+        &:focus{
+            outline: none;
+        }
+    }
+
+.time-control {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-volume {
+    width: 0px;
+    height: 4px;
+    background: $primaryLight;
+    border-radius: 3px;
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    -webkit-appearance: none;
+    appearance: none;
+    opacity: 0;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+
+input[type=range].slider-volume::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: $primaryLight;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: $primaryLight;
+    cursor: pointer;
+ }
+
+.duration {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: rgba(0, 136, 255, 0.3);
+    border-radius: 0.5;
+    top: 0;
+}
+
+.button-upload, .button-download {
+    background: transparent;
+    border: none;
+}
+
+.volume-button {
+    z-index: 1000;
+}
+
+.toggle-volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 2s;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+.controls-container {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+
+}
+
+.fa-control.fa {
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.button-speed {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    color: $primaryLight;
+    z-index: 10;
+    &:hover {
+        .speed-list {
+            opacity: 1;
+        }
+    }
+}
+.speed-list {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    background: $primaryLight;
+    list-style: none;
+    padding: 0;
+    border: .3px solid $primary;
+    border-radius: 5px;
+    .speed-item {
+        font-size: 14px;
+        cursor: pointer;
+        padding: 5px;
+        padding: 10px 15px 10px 15px;
+        &:hover{
+            background: $primary;
+            color: $primaryLight;
+        }
+    }
+}
+
+.speed-container {
+    display: flex;
+}
+
+.canvas-wrapped {
+    width: 100%;
+    display: flex;
+    margin-left: 25px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.canvas-container {
+    position: relative;
+    height: 50%;
+    background: white;
+    cursor: pointer;
+}
+}
+
