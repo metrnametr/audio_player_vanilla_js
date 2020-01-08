@@ -1,7 +1,9 @@
-# audio_player_vanilla_js
+# audio_player
+
+`npm install`
 
 # For dev start use command
-### npm run dev
+### `npm run dev`
 
 # For build start use command
-### npm run build
+### `npm run build`
